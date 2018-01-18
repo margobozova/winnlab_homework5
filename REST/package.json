@@ -1,0 +1,37 @@
+{
+  "name": "winnlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'To be implemented'",
+    "start:dev": "cross-env NODE_ENV=development babel-node ./server/index.js",
+    "dev": "nodemon --watch ./server --ignore ./server/__tests__ -x \"npm run start:dev\""
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.1",
+    "nodemon": "^1.12.5"
+  }
+}
